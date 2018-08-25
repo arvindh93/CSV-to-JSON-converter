@@ -4,7 +4,6 @@ const path = require('path')
 class Converter {
   convFromCSVFile(filepath, callback) {
     fs.access(filepath, fs.constants.F_OK, (err) => {
-      console.log("No file exists in the given path - " + filepath);
       if (err) {
           callback(err)
       } else {
@@ -23,7 +22,7 @@ class Converter {
               } else {
                 var resultFileName = path.basename(filepath).split('.')[0];
                 var resultFileDir = path.dirname(filepath);
-                fs.writeFileSync(path.join(resultFileDir,resultFileName + '.txt'), JSON.stringify(data))
+                fs.writeFileSync(path.join(resultFileDir,resultFileName + '.txt'), JSON.stringify(data, null, 2))
                 callback(null);
               }
             });

@@ -5,7 +5,7 @@ const csvConv = require('../csvToJsonConv')
 
 var convObj = new csvConv()
 it('Should return error on passing invalid file path', function(done) {
-  convObj.convFromCSVFile('noSuchFileExists.csv', function(err) {
+  convObj.convFromCSVFile(path.join(__dirname,'noSuchFileExists.csv'), function(err) {
       if (err) {
         done()
       } else {
@@ -15,7 +15,7 @@ it('Should return error on passing invalid file path', function(done) {
 })
 
 it('Should return error on passing file with invalid ext', function(done) {
-  convObj.convFromCSVFile('fileWithNonCSVExt.txt', function(err) {
+  convObj.convFromCSVFile(path.join(__dirname,'fileWithNonCSVExt.csv'), function(err) {
     if (err) {
       assert.equal(err.message, "Invalid extension. Only CSV files should be uploaded")
       done()
