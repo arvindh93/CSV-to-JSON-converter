@@ -5,7 +5,7 @@
 ```
 const path = require('path')
 const fs = require('fs')
-const CsvConv = require('../csvToJsonConv')
+const CsvConv = require('./csvToJsonConv')
 
 var convObj = new CsvConv()
 
