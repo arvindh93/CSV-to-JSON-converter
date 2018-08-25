@@ -1,0 +1,26 @@
+{
+  "name": "csvToJsonConverter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "csvToJsonConv.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arvindh93/edx.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arvindh93/edx/issues"
+  },
+  "homepage": "https://github.com/arvindh93/edx#readme",
+  "dependencies": {
+    "mocha": "^5.2.0"
+  }
+}
